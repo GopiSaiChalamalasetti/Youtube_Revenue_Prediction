@@ -5,5 +5,7 @@ Frontend: HTML, CSS<br>
 Backend: Python, Flask<br>
 Machine Learning: Scikit-learn, Pandas, NumPy<br>
 Model Used: Random Forest Regression<br>
-Deployment: Runs locally via Flask server
+Deployment: Runs locally via Flask server<br>
+Kaggle Dataset Link:https://www.kaggle.com/datasets/kristhecoder/youtube-revenue-data-20182021
+Trained Model Link:https://colab.research.google.com/drive/1AziwmeRSJfNrYycF6i0c2E0360CRF9Zg?usp=sharing
 
