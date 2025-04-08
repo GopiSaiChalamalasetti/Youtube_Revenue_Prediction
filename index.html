@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Revenue Predictor</title>
+
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end; /* moves content to the right */
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("/static/images/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+        /* Heading styling */
+        h2 {
+            position: absolute;
+            top: 40px;
+            left: 210px;
+            color:#ee1919;
+            font-size: 2em;
+            margin: 0;
+       }
+
+        /* Form container styling */
+        form {
+            background: #a30e0e;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(243, 25, 25, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin-right: 100px; /* add some spacing from the right edge */
+        }
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        /* Input field styling */
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 20px;
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+
+        input[type="number"]:focus {
+            border-color: #f16a6a;
+            outline: none;
+            box-shadow: 0 0 5px rgba(225, 24, 24, 0.5);
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #f36d6df2;
+            border: none;
+            border-radius: 10px;
+            color:black;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff0a0a;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5em;
+            }
+
+            form {
+                padding: 20px;
+                max-width: 90%; /* Full width on small screens */
+            }
+
+            input[type="number"] {
+                padding: 6px;
+                font-size: 0.8em;
+            }
+
+            input[type="submit"] {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>YouTube Revenue Predictor</h2>
+    <form action="/predict" method="POST">
+        <label>Views:</label>
+        <input type="number" name="views" required><br>
+
+        <label>Likes:</label>
+        <input type="number" name="likes" required><br>
+
+        <label>Shares:</label>
+        <input type="number" name="shares" required><br>
+
+        <label>Watch Time (hours):</label>
+        <input type="number" name="watch_time" step="0.1" required><br>
+
+        <label>Subscribers:</label>
+        <input type="number" name="subscribers" required><br>
+
+        <label>Subscribers Gained:</label>
+        <input type="number" name="subscribers_gained" required><br>
+
+        <label>Dislikes:</label>
+        <input type="number" name="dislikes" required><br>
+
+        <label>Average Percentage Viewed (%):</label>
+        <input type="number" name="average_percentage_viewed" step="0.1" required><br><br>
+
+        <input type="submit" value="Predict Revenue">
+    </form>
+</body>
+</html>
